@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @volunteer_point.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @volunteer_point.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @volunteer_point.picture %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @volunteer_point.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @volunteer_point.latitude %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @volunteer_point.contact_phone %>
+</p>
+
+<%= link_to 'Edit', edit_volunteer_point_path(@volunteer_point) %> |
+<%= link_to 'Back', volunteer_points_path %>

@@ -1,0 +1,35 @@
+<h1>Listing volunteer_points</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Contact phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @volunteer_points.each do |volunteer_point| %>
+      <tr>
+        <td><%= volunteer_point.name %></td>
+        <td><%= volunteer_point.description %></td>
+        <td><%= volunteer_point.picture %></td>
+        <td><%= volunteer_point.longitude %></td>
+        <td><%= volunteer_point.latitude %></td>
+        <td><%= volunteer_point.contact_phone %></td>
+        <td><%= link_to 'Show', volunteer_point %></td>
+        <td><%= link_to 'Edit', edit_volunteer_point_path(volunteer_point) %></td>
+        <td><%= link_to 'Destroy', volunteer_point, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Volunteer point', new_volunteer_point_path %>
