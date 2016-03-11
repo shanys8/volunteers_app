@@ -14,4 +14,8 @@ class ClientController < ApplicationController
     @volunteer_point = VolunteerPoint.find(params[:id])
     render 'show'
   end
+
+  def map
+    render 'map'
+  end
 end
