@@ -19,7 +19,7 @@
         <tr align="left">
           <td><%= volunteer_point[:object].name %></td>
           <td>Only <%= volunteer_point[:distance].round(2) %> KM away</td>
-          <td><a href="/my_volunteer_points/<%= volunteer_point[:object].id %>">Go</a></td>
+          <td><button> <a href="/my_volunteer_points/<%= volunteer_point[:object].id %>">Go</a> </button></td>
         </tr>
     <% end %>
     </tbody>
