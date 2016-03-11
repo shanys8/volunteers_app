@@ -1,0 +1,28 @@
+.client {
+  background-color: #FAEFCB;
+  width: 100%;
+  font-family: fantasy;
+  text-align: center;
+  .header {
+    color: orange;
+    text-align: center;
+  }
+
+  .content {
+    font-size: 20px;
+  }
+
+  .image {
+    width: 10px;
+    height: 10px;
+  }
+  .title {
+    background-image: url("http://eskipaper.com/images/flower-wallpapers-9.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+  }
+
+}

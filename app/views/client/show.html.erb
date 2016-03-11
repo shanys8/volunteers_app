@@ -1,0 +1,25 @@
+<section class="client">
+  <p id="notice"><%= notice %></p>
+  <h1 class="title"> Your volunteering place </h1>
+  <p>
+    <strong class="header">Name:</strong><br>
+    <span class="content"><%= @volunteer_point.name %></span>
+  </p>
+
+  <p>
+    <strong class="header">Description:</strong><br>
+    <span class="content"><%= @volunteer_point.description %></span>
+  </p>
+
+  <p>
+    <strong class="header">Picture:</strong><br>
+    <span class="content"><img style="width: 100px;height: 100px;" src=<%= @volunteer_point.picture %>></span>
+  </p>
+
+  <p>
+    <strong class="header">Contact phone:</strong><br>
+    <span class="content"><%= @volunteer_point.contact_phone %></span>
+  </p>
+
+</section>
+

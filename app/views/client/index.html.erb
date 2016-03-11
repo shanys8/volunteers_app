@@ -1,0 +1,31 @@
+<section class="client">
+
+  <h1 class="title">All your close Volunteer points</h1>
+
+
+  <table class="table table-striped" width="100%" >
+    <thead>
+    <tr class="header" style="text-align: left;">
+      <th>Name</th>
+      <th>Distance</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @volunteer_points.each do |volunteer_point| %>
+        <tr align="left">
+          <td><%= volunteer_point[:object].name %></td>
+          <td>Only <%= volunteer_point[:distance].round(2) %> KM away</td>
+          <td><a href="/my_volunteer_points/<%= volunteer_point[:object].id %>">Go</a></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+</section>
+
+
+
+
+
