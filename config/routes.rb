@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'my_volunteer_points' => 'client#index'
   get 'map' => 'client#map'
+  get 'home' => 'client#home'
   get 'my_volunteer_points/:id' => 'client#show'
 
 end

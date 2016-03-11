@@ -18,4 +18,8 @@ class ClientController < ApplicationController
   def map
     render 'map'
   end
+
+  def home
+    render 'home'
+  end
 end
