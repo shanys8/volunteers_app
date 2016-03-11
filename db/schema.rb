@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311092501) do
+ActiveRecord::Schema.define(version: 20160311093629) do
 
   create_table "volunteer_points", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "picture"
-    t.integer  "longitude"
-    t.integer  "latitude"
+    t.float    "longitude"
+    t.float    "latitude"
     t.string   "contact_phone"
     t.datetime "created_at"
     t.datetime "updated_at"

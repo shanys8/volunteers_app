@@ -1,5 +1,18 @@
 class VolunteerPointsController < ApplicationController
 
+  def get_close_volunteer_points
+    render :json => {:success => false, :error => 'Missing params'} and return if params[:longitude].blank? || params[:latitude].blank?
+    radius = 0.4
+    longitude = params[:longitude].to_f
+    latitude = params[:latitude].to_f
+    close_vps = VolunteerPoint.where("longitude BETWEEN ? AND ? AND latitude BETWEEN ? AND ?", longitude-radius, longitude+radius, latitude-radius, latitude+radius).to_a
+
+    sorted_result = close_vps.sort_by { |vp| vp.get_distance_from(longitude, latitude) }
+    result_present = sorted_result.map {|vp| {:object => vp, :distance => vp.get_distance_from(longitude, latitude)}}.to_a
+
+    render :json => {:success => true, :result => result_present}
+  end
+
   def index
     @volunteer_points = VolunteerPoint.all
     render 'index'
